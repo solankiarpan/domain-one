@@ -1,9 +1,5 @@
 name: Push Events
-on: 
-  push:
-    branches:
-      - main
-      - test
+on: pull_request
 jobs:  
   show-info:
       runs-on: ubuntu-latest
