@@ -1,5 +1,8 @@
 name: Push Events
-on: pull_request
+on: 
+  issues:
+    types:
+      - opened
 jobs:  
   show-info:
       runs-on: ubuntu-latest
