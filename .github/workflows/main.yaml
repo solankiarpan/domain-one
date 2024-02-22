@@ -1,17 +1,13 @@
 name: Manual Workflow
-on: 
-  workflow_dispatch:
-    inputs:
-      param1:
-        description: 'Description for param1'
-        required: true
-        default: 'Hello World'
-jobs:  
-  run-manual-tasks:
-      runs-on: ubuntu-latest
-      steps:
-      - name: Checkout Repository
+on : [push]
+
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
         uses: actions/checkout@v4
-      - name: Run Manual Task
-        run: |
-          echo "Running manual task with param1: ${{ github.event.inputs.param1 }}"
+      - name: Use Api Key
+        run: echo "API_KEY is ${{ secrets.API_KEY }}"
+
+        
