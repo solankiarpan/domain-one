@@ -1,5 +1,5 @@
-name: Manual Workflow
-on : [push]
+name: Example Workflow
+on: [push]
 
 jobs:
   example:
@@ -7,7 +7,9 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
-      - name: Use Api Key
+      - name: Use API Key
         run: echo "API_KEY is ${{ secrets.API_KEY }}"
+        
+    
 
         
